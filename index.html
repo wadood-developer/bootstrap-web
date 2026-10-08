@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nexa — Build Something Amazing</title>
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .hero {
+      min-height: 90vh;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(99, 102, 241, .35), transparent 30%),
+        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, .3), transparent 30%),
+        linear-gradient(135deg, #09090f, #111827 50%, #1e1b4b);
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #818cf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .12);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .3);
+      backdrop-filter: blur(20px);
+    }
+
+    .feature-card {
+      transition: all .3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(79, 70, 229, .15);
+    }
+
+    .icon-box {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+    }
+
+    .section-title {
+      max-width: 700px;
+    }
+
+    .pricing-card {
+      transition: .3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .popular {
+      transform: scale(1.04);
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+    }
+
+    .stats-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .cta {
+      background:
+        radial-gradient(circle at 10% 50%, rgba(99,102,241,.5), transparent 30%),
+        radial-gradient(circle at 90% 50%, rgba(236,72,153,.4), transparent 30%),
+        #111827;
+    }
+
+    .footer-link {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: .2s;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    .floating {
+      animation: floating 4s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .blur-circle {
+      width: 250px;
+      height: 250px;
+      filter: blur(80px);
+      position: absolute;
+      border-radius: 50%;
+      opacity: .35;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary">
+  <div class="container py-2">
+
+    <a class="navbar-brand fw-bold fs-4" href="#">
+      <span class="text-primary">N</span>exa
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarMenu"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+
+      <ul class="navbar-nav mx-auto gap-lg-3">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#features">Features</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">Pricing</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">FAQ</a>
+        </li>
+
+      </ul>
+
+      <a href="#contact" class="btn btn-light rounded-pill px-4">
+        Get Started
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<header id="home" class="hero text-white position-relative overflow-hidden">
+
+  <div class="blur-circle bg-primary top-0 start-0"></div>
+  <div class="blur-circle bg-danger bottom-0 end-0"></div>
+
+  <div class="container py-5 position-relative">
+
+    <div class="row align-items-center min-vh-100 py-5">
+
+      <!-- Hero Text -->
+      <div class="col-lg-7">
+
+        <span class="badge rounded-pill bg-primary-subtle text-primary px-3 py-2 mb-4">
+          <i class="bi bi-stars me-1"></i>
+          The future starts here
+        </span>
+
+        <h1 class="display-2 fw-bold lh-1 mb-4">
+          Turn your ideas into
+          <span class="gradient-text">something extraordinary.</span>
+        </h1>
+
+        <p class="lead text-white-50 mb-5 col-lg-10">
+          Nexa is a modern platform designed to help ambitious people,
+          startups, and creative teams transform ideas into beautiful
+          digital experiences.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mb-5">
+
+          <a href="#pricing" class="btn btn-primary btn-lg rounded-pill px-4">
+            Start Creating
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+
+          <a href="#features" class="btn btn-outline-light btn-lg rounded-pill px-4">
+            Explore Features
+          </a>
+
+        </div>
+
+        <div class="d-flex align-items-center gap-4">
+
+          <div>
+            <div class="d-flex">
+              <img
+                src="https://i.pravatar.cc/100?img=1"
+                class="rounded-circle border border-3 border-dark avatar"
+                alt="User"
+              >
+
+              <img
+                src="https://i.pravatar.cc/100?img=2"
+                class="rounded-circle border border-3 border-dark avatar ms-n2"
+                alt="User"
+              >
+
+              <img
+                src="https://i.pravatar.cc/100?img=3"
+                class="rounded-circle border border-3 border-dark avatar ms-n2"
+                alt="User"
+              >
+
+              <img
+                src="https://i.pravatar.cc/100?img=4"
+                class="rounded-circle border border-3 border-dark avatar ms-n2"
+                alt="User"
+              >
+            </div>
+          </div>
+
+          <div>
+            <div class="text-warning">
+              ★★★★★
+            </div>
+            <small class="text-white-50">
+              Trusted by 10,000+ creators
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Hero Dashboard -->
+      <div class="col-lg-5 mt-5 mt-lg-0">
+
+        <div class="hero-card rounded-5 p-3 floating">
+
+          <div class="bg-dark rounded-4 p-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+              <div>
+                <small class="text-secondary">Dashboard</small>
+                <h5 class="mb-0 text-white">Overview</h5>
+              </div>
+
+              <span class="badge bg-success-subtle text-success rounded-pill">
+                <i class="bi bi-circle-fill small"></i>
+                Live
+              </span>
+
+            </div>
+
+            <div class="row g-3">
+
+              <div class="col-6">
+                <div class="glass rounded-4 p-3">
+                  <small class="text-white-50">Revenue</small>
+                  <h4 class="text-white mt-2">$48.2K</h4>
+                  <small class="text-success">
+                    <i class="bi bi-arrow-up"></i> 18.4%
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="glass rounded-4 p-3">
+                  <small class="text-white-50">Users</small>
+                  <h4 class="text-white mt-2">24.8K</h4>
+                  <small class="text-success">
+                    <i class="bi bi-arrow-up"></i> 12.8%
+                  </small>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="glass rounded-4 p-4">
+
+                  <div class="d-flex justify-content-between">
+                    <span class="text-white-50">
+                      Performance
+                    </span>
+                    <span class="text-success">
+                      +24.8%
+                    </span>
+                  </div>
+
+                  <div class="progress mt-4" style="height: 10px;">
+                    <div
+                      class="progress-bar bg-primary"
+                      style="width: 78%"
+                    ></div>
+                  </div>
+
+                  <div class="d-flex justify-content-between mt-2">
+                    <small class="text-white-50">January</small>
+                    <small class="text-white-50">December</small>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="bg-dark text-white border-top border-secondary">
+  <div class="container py-5">
+
+    <div class="row text-center g-4">
+
+      <div class="col-6 col-lg-3">
+        <div class="stats-number text-primary">10K+</div>
+        <p class="text-white-50 mb-0">Happy Customers</p>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="stats-number text-primary">98%</div>
+        <p class="text-white-50 mb-0">Satisfaction Rate</p>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="stats-number text-primary">24/7</div>
+        <p class="text-white-50 mb-0">Customer Support</p>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <div class="stats-number text-primary">50+</div>
+        <p class="text-white-50 mb-0">Countries</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section id="features" class="py-5 bg-light">
+
+  <div class="container py-5">
+
+    <div class="text-center section-title mx-auto mb-5">
+
+      <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+        Powerful Features
+      </span>
+
+      <h2 class="display-5 fw-bold mt-3">
+        Everything you need to
+        <span class="text-primary">grow faster.</span>
+      </h2>
+
+      <p class="text-secondary lead">
+        Powerful tools wrapped inside a simple and beautiful experience.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-primary-subtle text-primary mb-4">
+              <i class="bi bi-lightning-charge-fill fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">Lightning Fast</h4>
+
+            <p class="text-secondary">
+              Built for speed and optimized to deliver a smooth
+              experience on every device.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-success-subtle text-success mb-4">
+              <i class="bi bi-shield-check fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">Secure by Design</h4>
+
+            <p class="text-secondary">
+              Your data is protected using modern security practices
+              and reliable infrastructure.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-warning-subtle text-warning mb-4">
+              <i class="bi bi-bar-chart-fill fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">Smart Analytics</h4>
+
+            <p class="text-secondary">
+              Understand your audience with clear insights and
+              actionable performance data.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-danger-subtle text-danger mb-4">
+              <i class="bi bi-palette-fill fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">Beautiful Design</h4>
+
+            <p class="text-secondary">
+              Create stunning digital experiences without needing
+              advanced design skills.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-info-subtle text-info mb-4">
+              <i class="bi bi-phone-fill fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">Fully Responsive</h4>
+
+            <p class="text-secondary">
+              Your projects look perfect across smartphones,
+              tablets, laptops, and large screens.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Feature -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 h-100 p-3 feature-card">
+
+          <div class="card-body">
+
+            <div class="icon-box bg-dark-subtle text-dark mb-4">
+              <i class="bi bi-stars fs-4"></i>
+            </div>
+
+            <h4 class="fw-bold">AI Powered</h4>
+
+            <p class="text-secondary">
+              Use intelligent tools to automate repetitive work
+              and focus on what really matters.
+            </p>
+
+            <a href="#" class="text-primary text-decoration-none fw-semibold">
+              Learn more →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="py-5">
+
+  <div class="container py-5">
+
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+
+        <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+          Why Nexa?
+        </span>
+
+        <h2 class="display-5 fw-bold mt-3">
+          Designed for people who
+          <span class="text-primary">think differently.</span>
+        </h2>
+
+        <p class="lead text-secondary">
+          We believe technology should make your work easier,
+          not more complicated.
+        </p>
+
+        <p class="text-secondary">
+          Nexa combines powerful technology with a simple,
+          intuitive interface. Whether you're launching a startup,
+          managing a business, or building your next big idea,
+          Nexa gives you the tools to move faster.
+        </p>
+
+        <div class="row g-4 mt-3">
+
+          <div class="col-6">
+            <h3 class="fw-bold">10K+</h3>
+            <p class="text-secondary mb-0">Active users</p>
+          </div>
+
+          <div class="col-6">
+            <h3 class="fw-bold">4.9/5</h3>
+            <p class="text-secondary mb-0">Average rating</p>
+          </div>
+
+        </div>
+
+        <a href="#" class="btn btn-dark rounded-pill px-4 mt-4">
+          Discover Nexa
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+
+      </div>
+
+
+      <div class="col-lg-6">
+
+        <div class="position-relative">
+
+          <div class="bg-primary rounded-5 position-absolute top-0 end-0"
+               style="width: 80%; height: 80%; opacity: .1;">
+          </div>
+
+          <div class="card border-0 shadow-lg rounded-5 overflow-hidden position-relative">
+
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+              class="img-fluid"
+              alt="Team working"
+            >
+
+            <div class="card-body p-4">
+
+              <div class="d-flex align-items-center gap-3">
+
+                <div class="icon-box bg-primary text-white">
+                  <i class="bi bi-rocket-takeoff-fill"></i>
+                </div>
+
+                <div>
+                  <h5 class="mb-0 fw-bold">
+                    Build without limits
+                  </h5>
+
+                  <small class="text-secondary">
+                    Your next chapter starts today.
+                  </small>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section class="py-5 bg-light">
+
+  <div class="container py-5">
+
+    <div class="text-center section-title mx-auto mb-5">
+
+      <span class="badge bg-dark text-white rounded-pill px-3 py-2">
+        Simple Process
+      </span>
+
+      <h2 class="display-5 fw-bold mt-3">
+        From idea to reality in
+        <span class="text-primary">three steps.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+
+        <div class="text-center px-4">
+
+          <div class="rounded-circle bg-primary text-white
+                      d-inline-flex align-items-center justify-content-center
+                      fw-bold fs-4"
+               style="width: 70px; height: 70px;">
+            01
+          </div>
+
+          <h4 class="fw-bold mt-4">Create</h4>
+
+          <p class="text-secondary">
+            Start with your idea and use our tools to turn it
+            into a beautiful project.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="text-center px-4">
+
+          <div class="rounded-circle bg-dark text-white
+                      d-inline-flex align-items-center justify-content-center
+                      fw-bold fs-4"
+               style="width: 70px; height: 70px;">
+            02
+          </div>
+
+          <h4 class="fw-bold mt-4">Customize</h4>
+
+          <p class="text-secondary">
+            Personalize every detail and create an experience
+            that represents your unique vision.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-4">
+
+        <div class="text-center px-4">
+
+          <div class="rounded-circle bg-primary text-white
+                      d-inline-flex align-items-center justify-content-center
+                      fw-bold fs-4"
+               style="width: 70px; height: 70px;">
+            03
+          </div>
+
+          <h4 class="fw-bold mt-4">Launch</h4>
+
+          <p class="text-secondary">
+            Publish your project and share your creation
+            with the world.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="py-5">
+
+  <div class="container py-5">
+
+    <div class="text-center section-title mx-auto mb-5">
+
+      <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+        Testimonials
+      </span>
+
+      <h2 class="display-5 fw-bold mt-3">
+        Loved by people
+        <span class="text-primary">everywhere.</span>
+      </h2>
+
+    </div>
+
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-3">
+
+          <div class="card-body">
+
+            <div class="text-warning mb-3">
+              ★★★★★
+            </div>
+
+            <p class="lead fs-6">
+              “Nexa completely changed how our team works.
+              Everything feels faster, cleaner, and more organized.”
+            </p>
+
+            <div class="d-flex align-items-center gap-3 mt-4">
+
+              <img
+                src="https://i.pravatar.cc/100?img=11"
+                class="rounded-circle avatar"
+                alt="Sarah"
+              >
+
+              <div>
+                <h6 class="mb-0 fw-bold">Sarah Mitchell</h6>
+                <small class="text-secondary">Product Designer</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-3">
+
+          <div class="card-body">
+
+            <div class="text-warning mb-3">
+              ★★★★★
+            </div>
+
+            <p class="lead fs-6">
+              “The interface is beautiful, but the best part is
+              how easy everything is to understand.”
+            </p>
+
+            <div class="d-flex align-items-center gap-3 mt-4">
+
+              <img
+                src="https://i.pravatar.cc/100?img=12"
+                class="rounded-circle avatar"
+                alt="David"
+              >
+
+              <div>
+                <h6 class="mb-0 fw-bold">David Anderson</h6>
+                <small class="text-secondary">Startup Founder</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-3">
+
+          <div class="card-body">
+
+            <div class="text-warning mb-3">
+              ★★★★★
+            </div>
+
+            <p class="lead fs-6">
+              “We've tried many platforms, but Nexa is the first
+              one our entire team actually enjoys using.”
+            </p>
+
+            <div class="d-flex align-items-center gap-3 mt-4">
+
+              <img
+                src="https://i.pravatar.cc/100?img=32"
+                class="rounded-circle avatar"
+                alt="Emily"
+              >
+
+              <div>
+                <h6 class="mb-0 fw-bold">Emily Carter</h6>
+                <small class="text-secondary">Marketing Lead</small>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing" class="py-5 bg-light">
+
+  <div class="container py-5">
+
+    <div class="text-center section-title mx-auto mb-5">
+
+      <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+        Pricing
+      </span>
+
+      <h2 class="display-5 fw-bold mt-3">
+        Choose the plan that
+        <span class="text-primary">fits you.</span>
+      </h2>
+
+      <p class="text-secondary lead">
+        Start free and upgrade whenever you're ready.
+      </p>
+
+    </div>
+
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Starter -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 shadow-sm h-100 pricing-card">
+
+          <div class="card-body p-5">
+
+            <h5 class="fw-bold">Starter</h5>
+
+            <p class="text-secondary">
+              Perfect for getting started.
+            </p>
+
+            <h2 class="display-5 fw-bold my-4">
+              $0
+              <small class="fs-6 text-secondary fw-normal">/month</small>
+            </h2>
+
+            <a href="#" class="btn btn-outline-dark w-100 rounded-pill">
+              Get Started
+            </a>
+
+            <hr class="my-4">
+
+            <p class="fw-semibold">Includes:</p>
+
+            <ul class="list-unstyled text-secondary">
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                3 projects
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Basic analytics
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Community support
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                1 GB storage
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Pro -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-primary border-2 rounded-4 shadow-lg h-100 pricing-card popular">
+
+          <div class="card-body p-5">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+              <h5 class="fw-bold">Professional</h5>
+
+              <span class="badge bg-primary rounded-pill">
+                Popular
+              </span>
+
+            </div>
+
+            <p class="text-secondary">
+              For growing creators and teams.
+            </p>
+
+            <h2 class="display-5 fw-bold my-4">
+              $19
+              <small class="fs-6 text-secondary fw-normal">/month</small>
+            </h2>
+
+            <a href="#" class="btn btn-primary w-100 rounded-pill">
+              Start Free Trial
+            </a>
+
+            <hr class="my-4">
+
+            <p class="fw-semibold">Everything in Starter, plus:</p>
+
+            <ul class="list-unstyled text-secondary">
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Unlimited projects
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Advanced analytics
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Priority support
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                50 GB storage
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                AI tools
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Business -->
+      <div class="col-md-6 col-lg-4">
+
+        <div class="card border-0 rounded-4 shadow-sm h-100 pricing-card">
+
+          <div class="card-body p-5">
+
+            <h5 class="fw-bold">Business</h5>
+
+            <p class="text-secondary">
+              For serious teams and organizations.
+            </p>
+
+            <h2 class="display-5 fw-bold my-4">
+              $49
+              <small class="fs-6 text-secondary fw-normal">/month</small>
+            </h2>
+
+            <a href="#" class="btn btn-dark w-100 rounded-pill">
+              Contact Sales
+            </a>
+
+            <hr class="my-4">
+
+            <p class="fw-semibold">Everything in Pro, plus:</p>
+
+            <ul class="list-unstyled text-secondary">
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Unlimited storage
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Team management
+              </li>
+
+              <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Enterprise security
+              </li>
+
+              <li>
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Dedicated support
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section id="faq" class="py-5">
+
+  <div class="container py-5">
+
+    <div class="text-center mb-5">
+
+      <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+        FAQ
+      </span>
+
+      <h2 class="display-5 fw-bold mt-3">
+        Frequently asked questions
+      </h2>
+
+    </div>
+
+
+    <div class="accordion accordion-flush mx-auto" id="faqAccordion"
+         style="max-width: 850px;">
+
+      <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
+
+        <h2 class="accordion-header">
+
+          <button
+            class="accordion-button fw-semibold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqOne"
+          >
+            What is Nexa?
+          </button>
+
+        </h2>
+
+        <div
+          id="faqOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#faqAccordion"
+        >
+
+          <div class="accordion-body text-secondary">
+            Nexa is a modern digital platform designed to help
+            individuals and teams build, manage, and grow their
+            digital projects.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
+
+        <h2 class="accordion-header">
+
+          <button
+            class="accordion-button collapsed fw-semibold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqTwo"
+          >
+            Can I try Nexa for free?
+          </button>
+
+        </h2>
+
+        <div
+          id="faqTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordion"
+        >
+
+          <div class="accordion-body text-secondary">
+            Yes. Our Starter plan is completely free, and our
+            Professional plan includes a free trial.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="accordion-item border rounded-4 mb-3 overflow-hidden">
+
+        <h2 class="accordion-header">
+
+          <button
+            class="accordion-button collapsed fw-semibold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqThree"
+          >
+            Is Nexa mobile friendly?
+          </button>
+
+        </h2>
+
+        <div
+          id="faqThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordion"
+        >
+
+          <div class="accordion-body text-secondary">
+            Absolutely. Nexa is designed to work beautifully on
+            phones, tablets, laptops, and desktop computers.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="accordion-item border rounded-4 overflow-hidden">
+
+        <h2 class="accordion-header">
+
+          <button
+            class="accordion-button collapsed fw-semibold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faqFour"
+          >
+            How can I contact support?
+          </button>
+
+        </h2>
+
+        <div
+          id="faqFour"
+          class="accordion-collapse collapse"
+          data-bs-parent="#faqAccordion"
+        >
+
+          <div class="accordion-body text-secondary">
+            Our support team is available 24/7 through email and
+            live chat for Professional and Business customers.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section id="contact" class="py-5">
+
+  <div class="container py-5">
+
+    <div class="cta rounded-5 text-white p-5 text-center overflow-hidden">
+
+      <div class="py-5">
+
+        <span class="badge bg-white text-dark rounded-pill px-3 py-2">
+          Ready to begin?
+        </span>
+
+        <h2 class="display-4 fw-bold mt-4">
+          Your next big idea
+          <span class="gradient-text">starts here.</span>
+        </h2>
+
+        <p class="lead text-white-50 mx-auto"
+           style="max-width: 650px;">
+          Join thousands of creators and teams building better
+          experiences with Nexa.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+
+          <a href="#" class="btn btn-light btn-lg rounded-pill px-5">
+            Get Started
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+
+          <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-5">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="py-5 bg-light">
+
+  <div class="container py-4">
+
+    <div class="row align-items-center g-4">
+
+      <div class="col-lg-6">
+
+        <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">
+          Stay Updated
+        </span>
+
+        <h3 class="fw-bold mt-3">
+          Get useful ideas in your inbox.
+        </h3>
+
+        <p class="text-secondary mb-0">
+          No spam. Just product updates, useful resources,
+          and inspiration.
+        </p>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <form class="d-flex gap-2">
+
+          <input
+            type="email"
+            class="form-control form-control-lg rounded-pill"
+            placeholder="Enter your email"
+          >
+
+          <button class="btn btn-primary btn-lg rounded-pill px-4">
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5">
+
+  <div class="container">
+
+    <div class="row g-5 pb-5">
+
+      <div class="col-lg-4">
+
+        <a href="#" class="text-white text-decoration-none fs-3 fw-bold">
+          <span class="text-primary">N</span>exa
+        </a>
+
+        <p class="text-white-50 mt-3">
+          Building better digital experiences for ambitious
+          people and teams around the world.
+        </p>
+
+        <div class="d-flex gap-2 mt-4">
+
+          <a href="#"
+             class="btn btn-outline-light rounded-circle">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+
+          <a href="#"
+             class="btn btn-outline-light rounded-circle">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="#"
+             class="btn btn-outline-light rounded-circle">
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a href="#"
+             class="btn btn-outline-light rounded-circle">
+            <i class="bi bi-github"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-2">
+
+        <h6 class="fw-bold mb-4">Product</h6>
+
+        <div class="d-flex flex-column gap-3">
+
+          <a href="#" class="footer-link">Features</a>
+          <a href="#" class="footer-link">Pricing</a>
+          <a href="#" class="footer-link">Integrations</a>
+          <a href="#" class="footer-link">Updates</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-2">
+
+        <h6 class="fw-bold mb-4">Company</h6>
+
+        <div class="d-flex flex-column gap-3">
+
+          <a href="#" class="footer-link">About</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Contact</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-2">
+
+        <h6 class="fw-bold mb-4">Resources</h6>
+
+        <div class="d-flex flex-column gap-3">
+
+          <a href="#" class="footer-link">Documentation</a>
+          <a href="#" class="footer-link">Help Center</a>
+          <a href="#" class="footer-link">Community</a>
+          <a href="#" class="footer-link">Guides</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-6 col-lg-2">
+
+        <h6 class="fw-bold mb-4">Legal</h6>
+
+        <div class="d-flex flex-column gap-3">
+
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Security</a>
+          <a href="#" class="footer-link">Cookies</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <hr class="border-secondary">
+
+    <div class="d-flex flex-column flex-md-row
+                justify-content-between align-items-center py-4">
+
+      <p class="text-white-50 mb-0">
+        © 2026 Nexa. All rights reserved.
+      </p>
+
+      <p class="text-white-50 mb-0">
+        Made with <span class="text-danger">♥</span> for creators.
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+</body>
+</html>
